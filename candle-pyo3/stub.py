@@ -223,7 +223,7 @@ def write(module, directory, origin, check=False):
         is_auto = True
     else:
         with open(filename, "r") as f:
-            line = f.readline()
+            line = f.readline(5_000_000)
             if line == GENERATED_COMMENT:
                 is_auto = True
 
